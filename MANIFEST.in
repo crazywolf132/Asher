@@ -1,9 +1,0 @@
-include license.md
-include readme.md
-include requirements.txt
-
-recursive-include samantha/corpus/* *.json
-recursive-include samantha/adapters/* *.json
-
-recursive-exclude * *.pyc
-recursive-exclude * *.py~
