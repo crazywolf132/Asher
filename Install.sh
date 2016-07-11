@@ -48,31 +48,43 @@ else
 fi
 
 printf "%s\nChecking for python...\n"
-python --version | grep ${PYTHON_VERSION}
-if [[ $? != 0 ]] ;
+if which python > /dev/null 2>&1;
 then
+    printf "%s$(tput setaf 10) ${grn}python is already installed, great job!${end}\n"
+else
     # Install Python
-    printf "%s{blu}Downloading and Installing python${end}\n"
+    printf "%s${blu}Downloading and Installing python${end}\n"
     #Installing it...
-    apt-get install -y python
+    sudo apt-get install -y python
     #Finished installing
     printf "%s$(tput setaf 10)python is now installed!${end}\n"
-else
-    printf "%s$(tput setaf 10)node is already installed, great job!${end}\n"
 fi
 
 # Getting the code
-printf "%s\n{blu}Cloning Git Repo${end}\n"
+printf "%s\n${blu}Cloning Git Repo${end}\n"
 cd /home/$SUDO_USER
-sudo -u $SUDO_USER git clone https://github.com/crazywolf132/Samantha.git
-printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
+#Just checking if the files exist so it doesnt have heaps...
+if [ -d "samantha" ]; then
+  printf "%s\n$(tput setaf 10)Samantha is already downloaded${end}\n"
+fi
+if [ ! -d "samantha" ]; then
+  sudo -u $SUDO_USER git clone https://github.com/crazywolf132/Samantha.git
+  printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
+fi
+if [ -d "Samantha" ]; then
+  printf "%s\n$(tput setaf 10)Samantha is already downloaded${end}\n"
+fi
+if [ ! -d "Samantha" ]; then
+  sudo -u $SUDO_USER git clone https://github.com/crazywolf132/Samantha.git
+  printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
+fi
 
 # Installing dependencies.
-print "%s\n{blu}Cloning Git Python${end}\n"
+print "%s${blu}Cloning Git Python${end}\n"
 cd /home/$SUDO_USER
 sudo -u $SUDO_USER git clone https://github.com/gitpython-developers/GitPython.git
 # Done downloading
-print "%s\n$(tput setaf 10)Git python is now downloaded!${end}\n"
+printf "%s\n$(tput setaf 10)Git python is now downloaded!${end}\n"
 # Begin install
 cd GitPython
 python setup.py install
@@ -86,17 +98,17 @@ rm -R GitPython
 cd Samantha
 
 # Download Database
-printf "%s{blu}Grabbing Database${end}\n"
+printf "%s${blu}Grabbing Database${end}\n"
 sudo -u $SUDO_USER git clone https://github.com/crazywolf132/Ai-DB
 
 
 # Install package to make Samantha speak
-printf "%s\n{blu}Installing espeak${end}\n"
+printf "%s${blu}Installing espeak${end}\n"
 sudo apt-get install espeak
 sudo apt-get install espeak python-espeak
 
 
-printf "%s\n{blu}Installing all updates for Samantha...${end}\n"
+printf "%s${blu}Installing all updates for R.A.I.N...${end}\n"
 printf "%s${yel}This may take a while. Go grab a beer :)${end}\n"
 sudo -u $SUDO_USER apt-get update
 sudo -u $SUDO_USER sudo apt-get dist-upgrade
@@ -104,10 +116,10 @@ sudo -u $SUDO_USER sudo apt-get dist-upgrade
 # The mirror is now installed, yay!
 cat << "EOF"
 
-        |        Samantha is now installed!
+        |        R.A.I.N is now installed!
        / \
       / _ \      Once you fill out your config you can start the Ai with:
-     |.o '.|     python Main.py
+     |.o '.|     sudo bash Finish.sh
      |'._.'|
      |     |
    ,'|  |  |`.
