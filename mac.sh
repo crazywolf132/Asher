@@ -66,27 +66,16 @@ else
 fi
 
 # Getting the code
-printf "%s\n${blu}Cloning Git Repo${end}\n"
-cd /home/$SUDO_USER
-#Just checking if the files exist so it doesnt have heaps...
-if [ -d "samantha" ]; then
-  printf "%s\n$(tput setaf 10)Samantha is already downloaded${end}\n"
-fi
-if [ ! -d "samantha" ]; then
-  git clone https://github.com/crazywolf132/Samantha.git
-  printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
-fi
-if [ -d "Samantha" ]; then
-  printf "%s\n$(tput setaf 10)Samantha is already downloaded${end}\n"
-fi
-if [ ! -d "Samantha" ]; then
-  git clone https://github.com/crazywolf132/Samantha.git
-  printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
-fi
+printf "%s\n${blu}Cloning Git Repo...${end}\n"
+cd
+#Going to delete the files if they exist
+rm -rf Samantha
+git clone https://github.com/crazywolf132/Samantha.git
+printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
 
 # Installing dependencies.
-print "%s${blu}Cloning Git Python...${end}\n"
-cd /home/$SUDO_USER
+printf "%s${blu}Cloning Git Python...${end}\n"
+cd
 git clone https://github.com/gitpython-developers/GitPython.git
 # Done downloading
 printf "%s\n$(tput setaf 10)Git python is now downloaded!${end}\n"
@@ -115,6 +104,7 @@ brew install espeak
 printf "%s${blu}Installing all updates for R.A.I.N...${end}\n"
 printf "%s${yel}This may take a while. Go grab a beer :)${end}\n"
 pip install fuzzywuzzy
+pip install jsondb
 pip install jsondatabase
 pip install nltk
 pip install pymongo
