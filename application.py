@@ -1,7 +1,7 @@
 from samantha import Samantha
 
 
-# Create a new instance of a ChatBot
+# Create a new instance of the AI
 bot = Samantha("No Output",
         storage_adapter="samantha.adapters.storage.JsonDatabaseAdapter",
         logic_adapters=[
