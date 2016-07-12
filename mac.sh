@@ -48,8 +48,8 @@ else
 fi
 
 printf "%s\n${mag}Installing Homebrew...${end}\n"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-clear
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 printf "%s$(tput setaf 10)Homebrew is now installed!${end}"
 
 printf "%s\nChecking for python...\n"
@@ -85,9 +85,9 @@ if [ ! -d "Samantha" ]; then
 fi
 
 # Installing dependencies.
-print "%s${blu}Cloning Git Python${end}\n"
+print "%s${blu}Cloning Git Python...${end}\n"
 cd /home/$SUDO_USER
-sudo -u $SUDO_USER git clone https://github.com/gitpython-developers/GitPython.git
+git clone https://github.com/gitpython-developers/GitPython.git
 # Done downloading
 printf "%s\n$(tput setaf 10)Git python is now downloaded!${end}\n"
 # Begin install
