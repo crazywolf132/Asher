@@ -111,6 +111,7 @@ pip install nltk
 pip install pymongo
 pip install python-twitter
 pip install textblob
+pip install python-Levenshtein
 
 
 # The mirror is now installed, yay!
