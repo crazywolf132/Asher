@@ -8,8 +8,8 @@ class run():
             logic_adapters=[
                 "samantha.adapters.logic.ClosestMatchAdapter"
             ],
-            input_adapter="samantha.adapters.input.VariableInputTypeAdapter",
-            output_adapter="samantha.adapters.output.OutputFormatAdapter",
+            input_adapter="samantha.adapters.input.TerminalAdapter",
+            output_adapter="samantha.adapters.output.TerminalAdapter",
             database="./database.db"
       )
 
