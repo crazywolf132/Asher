@@ -76,6 +76,7 @@ printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
 # Installing dependencies.
 printf "%s${blu}Cloning Git Python...${end}\n"
 cd
+rm -rf GitPython
 git clone https://github.com/gitpython-developers/GitPython.git
 # Done downloading
 printf "%s\n$(tput setaf 10)Git python is now downloaded!${end}\n"
@@ -83,7 +84,7 @@ printf "%s\n$(tput setaf 10)Git python is now downloaded!${end}\n"
 cd GitPython
 python setup.py install
 # Finished install
-print "%s\n$(tput setaf 10)Git python is now installed!${end}\n"
+printf "%s\n$(tput setaf 10)Git python is now installed!${end}\n"
 # Now removing the remains
 cd ../
 rm -R GitPython
@@ -128,70 +129,3 @@ cat << "EOF"
 EOF
 # ASCII art found on http://textart.io/
 exit 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if [ "$(uname)" == "Darwin" ]; then
-    if [ "$(id -u)" = "0" ]; then
-    echo "This script cannot be run as root" 1>&2
-    exit 1
-    fi
-    echo 'System is MAC'
-
-
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    if [[ $EUID -ne 0 ]]; then
-    echo "This script must be run as root" 1>&2
-    exit 1
-    fi
-    echo 'System is LINUX'
-
-
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
-
-    echo 'System is WINDOWS'
-    echo 'User will not be able to install on this device.'
-
-
-fi
