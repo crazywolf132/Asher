@@ -73,14 +73,14 @@ if [ -d "samantha" ]; then
   printf "%s\n$(tput setaf 10)Samantha is already downloaded${end}\n"
 fi
 if [ ! -d "samantha" ]; then
-  sudo -u $SUDO_USER git clone https://github.com/crazywolf132/Samantha.git
+  git clone https://github.com/crazywolf132/Samantha.git
   printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
 fi
 if [ -d "Samantha" ]; then
   printf "%s\n$(tput setaf 10)Samantha is already downloaded${end}\n"
 fi
 if [ ! -d "Samantha" ]; then
-  sudo -u $SUDO_USER git clone https://github.com/crazywolf132/Samantha.git
+  git clone https://github.com/crazywolf132/Samantha.git
   printf "%s\n$(tput setaf 10)Samantha is now downloaded${end}\n"
 fi
 
@@ -104,7 +104,7 @@ cd Samantha
 
 # Download Database
 printf "%s${blu}Grabbing Database$...{end}\n"
-sudo -u $SUDO_USER git clone https://github.com/crazywolf132/Ai-DB
+git clone https://github.com/crazywolf132/Ai-DB
 
 
 # Install package to make Samantha speak
