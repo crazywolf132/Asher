@@ -131,6 +131,14 @@ class Samantha(object):
         Return the bot's response based on the input.
         """
         input_statement = self.input.process_input(input_item)
+        """
+        Here is where we can run the commands that the user speaks.
+        """
+        #print 'something else'
+        from . import Command
+        if Command().process_input(input_statement, self):
+            return
+        #print 'something else below'
 
         # Select a response to the input statement
         confidence, response = self.logic.process(input_statement)

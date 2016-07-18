@@ -9,7 +9,7 @@ bot = Samantha("No Output",
         ],
         input_adapter="samantha.adapters.input.TerminalAdapter",
         output_adapter="samantha.adapters.output.TerminalAdapter",
-        database="./Ai-DB/database.db"
+        database="./database.db"
     )
 
 print("Type something to begin...")
