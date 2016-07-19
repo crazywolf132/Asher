@@ -11,11 +11,7 @@ class Plugin:
         """
         Please leave this here or it will cause errors.
         """
-        self.the_command = ['life']
+        self.the_command = ['polish', 'turd']
 
     def action(self, command, statement, sam):
-        messages = ["It's 42, you idiot.",
-                    "It's 42. How many times do I have to tell you?",
-                    "The oposite of death!"]
-        message = random.choice(messages)
-        sam_print(sam, message)
+        sam_print(sam, 'You can\'t polish a turd, but you can roll it in glitter!')

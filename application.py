@@ -8,9 +8,10 @@ bot = Samantha("No Output",
             "samantha.adapters.logic.ClosestMatchAdapter"
         ],
         input_adapter="samantha.adapters.input.TerminalAdapter",
-        output_adapter="samantha.adapters.output.TerminalAdapter",
+        output_adapter="samantha.adapters.voice.VoiceOutput",
         database="./database.db"
     )
+
 
 print("Type something to begin...")
 

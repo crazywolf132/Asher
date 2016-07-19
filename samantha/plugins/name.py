@@ -11,11 +11,8 @@ class Plugin:
         """
         Please leave this here or it will cause errors.
         """
-        self.the_command = ['life']
+        self.the_command = ['what is my name']
 
     def action(self, command, statement, sam):
-        messages = ["It's 42, you idiot.",
-                    "It's 42. How many times do I have to tell you?",
-                    "The oposite of death!"]
-        message = random.choice(messages)
-        sam_print(sam, message)
+        name = 'dick head'
+        sam_print(sam, 'Your name is... ' + name)
