@@ -135,9 +135,30 @@ class Samantha(object):
         Here is where we can run the commands that the user speaks.
         """
         #print 'something else'
-        from . import Command
-        if Command().process_input(input_statement, self):
-            return
+        import os
+        import sys
+
+        path = os.path.dirname(os.path.abspath(__file__)) + '/' +'plugins/'
+        plugins = {}
+
+        # Load plugins
+        sys.path.insert(0, path)
+        for f in os.listdir(path):
+            fname, ext = os.path.splitext(f)
+            if ext == '.py':
+                mod = __import__(fname)
+                plugins[fname] = mod.Plugin()
+        sys.path.pop(0)
+
+        # Callback
+        for plugin in plugins.values():
+            commands = plugin.the_command
+            for word in input_statement.text.split(' '):
+                if word.lower().strip() in commands:
+                    plugin.action(word.lower().strip(), input_statement, self)
+                    return
+
+
         #print 'something else below'
 
         # Select a response to the input statement

@@ -1,27 +1,27 @@
-from .conversation import Statement
+from samantha.conversation import Statement
 from time import sleep
 from os import system
 import random
 import re
-
-IS_COMMAND = True
-NOT_COMMAND = False
+from samantha.required.required import *
 
 
+class Plugin:
+    def __init__(self):
+        """
+        Please leave this here or it will cause errors.
+        """
+        self.the_command = ['clear', 'wipe']
 
-class Command:
-    """
-    A simple class to load all the commands that the user
-    can use with Samantha.
-    """
-    def process_input(self, statement, sam):
+    def action(self, command, statement, sam):
+        system('clear')
+        sam_print(sam, 'Ok, all done.')
+        '''
         input_statement = sam.get_last_input_statement()
         i_s = input_statement
-        sam_print = lambda x: sam.output.process_response(Statement(x))
+
         if statement == 'clear':
-            system('clear')
-            sam_print('Ok, all done.')
-            return IS_COMMAND
+
         elif statement == 'quit':
             sam_print('Killing myself.')
             sam_print('See you next time.')
@@ -67,8 +67,8 @@ class Command:
         elif statement == 'life':
             messages = ["It's 42, you idiot.",
                         "It's 42. How many times do I have to tell you?"]
-
             message = random.choice(messages)
             sam_print(message)
             return IS_COMMAND
         return NOT_COMMAND
+        '''

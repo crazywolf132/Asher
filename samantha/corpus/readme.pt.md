@@ -4,7 +4,7 @@ Estes modulos são usados para treinar o samantha, de forma rápida, para respon
 Embora muito do samantha é projetado para ser independente de língua, é sempre util ter estes *sets* de treinamento disponíveis
 para preparar um novo banco de dados e fazer a variedade de respostas que o robô pode ser muito mais diversa.
 
-Para instruções de como usar estes dados, por favor consulte a [documentação do projeto](https://github.com/gunthercox/samantha/wiki/Training).
+Para instruções de como usar estes dados, por favor consulte a [documentação do projeto](https://github.com/RiskyAINetwork/samantha/wiki/Training).
 
 Todos os dados de treinamento contidos neste corpus é contribuição dos usuários.
 
