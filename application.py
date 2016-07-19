@@ -8,7 +8,7 @@ bot = Samantha("No Output",
             "samantha.adapters.logic.ClosestMatchAdapter"
         ],
         input_adapter="samantha.adapters.input.TerminalAdapter",
-        output_adapter="samantha.adapters.voice.VoiceOutput",
+        output_adapter="samantha.adapters.output.TerminalAdapter",
         database="./database.db"
     )
 
