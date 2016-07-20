@@ -16,7 +16,10 @@ class Plugin:
     def action(self, command, statement, sam):
         sam_print(sam, 'I see you want to download some new plugins...')
         sam_print(sam, 'Going to download all the plugins that the Developers have made.')
-        system('')
+        system('cd')
+        system('cd Samantha')
+        system('cd samantha/plugins')
+        system('curl -L ""')
         sam_print(sam, '')
         system('')
         sam_print(sam, 'Finished.')
