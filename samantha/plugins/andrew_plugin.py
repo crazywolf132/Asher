@@ -11,13 +11,20 @@ class Plugin:
         """
         Please leave this here or it will cause errors.
         """
-        self.the_command = ['who are you', '?']
-        self.the_command = ['help']
+
+        self.who = ['who are you', '?']
+        self.help = ['help']
+
+        self.the_command = self.who + self.help
 
     def action(self, command, statement, sam):
         sam_print(sam, 'My name is Andrew. I am here to help and serve you.')
         sleep(1)
         sam_print(sam, 'Feel free to ask me anything. If i do not know it, I will learn it.')
 
+        if command in self.who:
+            pass
+        elif command in self.help:
+            pass
 
         sam_print(sam, 'what with?')
