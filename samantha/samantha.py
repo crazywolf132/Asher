@@ -153,6 +153,9 @@ class Samantha(object):
         # Callback
         for plugin in plugins.values():
             commands = plugin.the_command
+            if input_statement.text in commands:
+                plugin.action(input_statement.text, input_statement, self)
+                return
             for word in input_statement.text.split(' '):
                 if word.lower().strip() in commands:
                     plugin.action(word.lower().strip(), input_statement, self)

@@ -11,7 +11,7 @@ class Plugin:
         """
         Please leave this here or it will cause errors.
         """
-        self.the_command = ['who are you']
+        self.the_command = ['who are you', 'help', '?']
 
     def action(self, command, statement, sam):
         sam_print(sam, 'My name is Andrew. I am here to help and serve you.')
