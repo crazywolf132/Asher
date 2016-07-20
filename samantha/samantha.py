@@ -134,7 +134,7 @@ class Samantha(object):
         """
         Here is where we can run the commands that the user speaks.
         """
-        #print 'something else'
+
         import os
         import sys
 
@@ -160,9 +160,6 @@ class Samantha(object):
                 if word.lower().strip() in commands:
                     plugin.action(word.lower().strip(), input_statement, self)
                     return
-
-
-        #print 'something else below'
 
         # Select a response to the input statement
         confidence, response = self.logic.process(input_statement)
