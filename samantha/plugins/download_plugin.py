@@ -1,10 +1,12 @@
 from samantha.conversation import Statement
 from time import sleep
-from os import system
+from os import system, execv
+import os
 import random
 import re
 from samantha.required.required import *
 
+application = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))+'/application.py'
 
 class Plugin:
     def __init__(self):
@@ -19,9 +21,10 @@ class Plugin:
         system('cd')
         system('cd Samantha')
         system('cd samantha/plugins')
-        system('curl -L ""')
-        sam_print(sam, '')
-        system('')
+        system('clear')
+        sam_print(sam, '2')
+        system('clear')
         sam_print(sam, 'Finished.')
         sleep(3)
         sam_print(sam, 'Going to restart system apply all updates.')
+        execv('/usr/bin/env', ('env', 'python', application, 'Welcome back.'))

@@ -164,6 +164,13 @@ class Samantha(object):
         # Select a response to the input statement
         confidence, response = self.logic.process(input_statement)
 
+        t = response.text
+        if not t.endswith('?') and not t.endswith('!') and not t.endswith('.'):
+            t += '.'
+        c = t[0]
+        t = c.upper()+t[1:]
+        response.text = t
+
         existing_statement = self.storage.find(input_statement.text)
 
         if existing_statement:
@@ -180,6 +187,8 @@ class Samantha(object):
         self.recent_statements.append(
             (input_statement, response, )
         )
+
+
 
         # Process the response output with the output adapter
         return self.output.process_response(response)
