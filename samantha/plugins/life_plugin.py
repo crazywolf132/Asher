@@ -11,7 +11,7 @@ class Plugin:
         """
         Please leave this here or it will cause errors.
         """
-        self.the_command = ['life']
+        self.the_command = ['meaning of life']
 
     def action(self, command, statement, sam):
         messages = ["It's 42, you idiot.",

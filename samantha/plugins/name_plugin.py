@@ -11,7 +11,7 @@ class Plugin:
         """
         Please leave this here or it will cause errors.
         """
-        self.the_command = ['what is my name']
+        self.the_command = ['what is my name', '?']
 
     def action(self, command, statement, sam):
         name = 'dick head'
