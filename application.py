@@ -1,6 +1,5 @@
 from samantha import Samantha
 from sys import argv
-import system
 import os
 import random
 system('clear')
