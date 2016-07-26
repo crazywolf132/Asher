@@ -23,5 +23,4 @@ class Plugin:
         system('cd ~/')
         system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/Update.sh" > update.sh')
         system('bash update.sh')
-        sleep(3)
-        sam_print(sam, '\003[1;33m' + 'Going to restart system apply all updates.\033[0m')
+        exit()
