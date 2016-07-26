@@ -25,7 +25,7 @@ class Plugin:
             sam_print(sam, '\003[1;32mGoing to run an update now.\033[0m')
             sleep(0.2)
             system('cd ~/')
-            system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/72f29e63108f40f052e95a1f87f7f94efef023a2/Update.sh" > update.sh')
+            system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/Update.sh" > update.sh')
             system('bash update.sh')
             sleep(3)
             sam_print(sam, '\003[1;33m' + 'Going to restart system apply all updates.\033[0m')
