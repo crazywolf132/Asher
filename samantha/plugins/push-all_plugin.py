@@ -28,5 +28,5 @@ class Plugin:
                 system('git commit -m "Pushed by SAMANTHA!"')
                 system('git push')
                 system('cd ..')
-            else
+            else:
                 print 'fuck u'
