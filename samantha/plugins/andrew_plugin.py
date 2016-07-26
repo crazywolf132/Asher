@@ -14,6 +14,7 @@ class Plugin:
 
         self.who = ['who are you', '?']
         self.help = ['help']
+        self.exit = ['quit', 'exit']
 
         self.the_command = self.who + self.help
 
@@ -25,3 +26,6 @@ class Plugin:
             sam_print(sam, 'Feel free to ask me anything. If i do not know it, I will learn it.')
         elif command in self.help:
             sam_print(sam, 'what with?')
+        elif command in self.exit:
+            sam_print(sam, 'Good bye sir.')
+            exit()
