@@ -17,6 +17,6 @@ class Plugin:
 
     def action(self, command, statement, sam):
         sam_print(sam, "Please wait a moment.")
+        system('rm -rf push.sh')
         system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/push-all.sh" > push.sh')
         system('bash push.sh')
-        
