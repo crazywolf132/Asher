@@ -21,9 +21,12 @@ class Plugin:
         system('cd ~/projects')
         a = check_output('ls').split()
         for folder in a:
-            system('cd ' + folder)
-            system('git pull')
-            system('git add .')
-            system('git commit -m "Pushed by SAMANTHA!"')
-            system('git push')
-            system('cd ..')
+            if os.path.isdir(folder):
+                system('cd ' + folder)
+                system('git pull')
+                system('git add .')
+                system('git commit -m "Pushed by SAMANTHA!"')
+                system('git push')
+                system('cd ..')
+            else
+                print 'fuck u'
