@@ -31,5 +31,5 @@ class Plugin:
             system('clear')
             sam_print(sam, 'Going to restart system apply all updates.')
             execv('/usr/bin/env', ('env', 'python', application, 'All done.'))
-        except e:
+        except :
             sam_print(sam, 'Please connect to the internet to download any updates.')
