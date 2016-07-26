@@ -14,7 +14,7 @@ class Plugin:
 
         self.who = ['who are you', '?']
         self.help = ['help']
-        self.exit = ['quit', 'exit']
+        self.exit = ['exit please']
 
         self.the_command = self.who + self.help
 
