@@ -1,6 +1,6 @@
 from samantha.conversation import Statement
 from time import sleep
-from os import system
+from os import system, execv
 import random
 import os
 import re
