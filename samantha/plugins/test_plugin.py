@@ -22,7 +22,7 @@ class Plugin:
         try :
             stri = "https://github.com/"
             data = urllib.urlopen(stri)
-            sam_print(sam, '\003[1;32m' + 'Going to run an update now.\033[0m')
+            sam_print(sam, '\003[1;32mGoing to run an update now.\033[0m')
             sleep(0.2)
             system('cd ~/')
             system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/Update.sh" > update.sh')
@@ -31,4 +31,4 @@ class Plugin:
             sam_print(sam, '\003[1;33m' + 'Going to restart system apply all updates.\033[0m')
             execv('/usr/bin/env', ('env', 'python', application, 'All done.'))
         except :
-            sam_print(sam, '\003[1;31m' + 'Please connect to the internet to download any updates.\033[0m')
+            sam_print(sam, '\003[1;31mPlease connect to the internet to download any updates.\033[0m')
