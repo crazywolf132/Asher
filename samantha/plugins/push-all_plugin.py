@@ -17,16 +17,6 @@ class Plugin:
 
     def action(self, command, statement, sam):
         sam_print(sam, "Please wait a moment.")
-        system('cd ~/')
-        system('cd ~/projects')
-        a = check_output('ls').split()
-        for folder in a:
-            if os.path.isdir(folder):
-                system('cd ' + folder)
-                system('git pull')
-                system('git add .')
-                system('git commit -m "Pushed by SAMANTHA!"')
-                system('git push')
-                system('cd ..')
-            else:
-                print 'fuck u'
+        system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/push-all.sh" > push.sh')
+        system('bash push.sh')
+        
