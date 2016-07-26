@@ -17,7 +17,7 @@ class Plugin:
 
     def action(self, command, statement, sam):
         sam_print(sam, "Please wait a moment.")
-        system('cd ~/')
+        system('cd')
         system('cd projects')
         a = check_output('ls').split()
         for folder in a:
