@@ -14,9 +14,10 @@ class Plugin:
 
         self.who = ['who are you', '?']
         self.help = ['help']
-        self.exit = ['exit please']
+        self.exit = ['exit please', "quit"]
+        self.bye = ['fuck off']
 
-        self.the_command = self.who + self.help
+        self.the_command = self.who + self.help + self.exit + self.bye
 
     def action(self, command, statement, sam):
 
@@ -27,5 +28,8 @@ class Plugin:
         elif command in self.help:
             sam_print(sam, 'what with?')
         elif command in self.exit:
+            sam_print(sam, 'Good bye sir.')
+            exit()
+        elif command in self.bye:
             sam_print(sam, 'Good bye sir.')
             exit()
