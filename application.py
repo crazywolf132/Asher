@@ -18,7 +18,7 @@ bot = Samantha("No Output",
         ],
         input_adapter="samantha.adapters.input.TerminalAdapter",
         output_adapter="samantha.adapters.output.TerminalAdapter",
-        database="./database.db"
+        database="./Ai-DB/database.db"
     )
 
 
