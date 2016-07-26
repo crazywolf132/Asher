@@ -20,7 +20,7 @@ class Plugin:
         system('clear')
         import urllib
         try :
-            stri = "https://8.8.8.8/"
+            stri = "https://github.com/"
             data = urllib.urlopen(stri)
             sam_print(sam, 'Going to run an update now.')
             sleep(0.2)
