@@ -5,6 +5,7 @@ import random
 import re
 from samantha.required.required import *
 
+application = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))+'/application.py'
 
 class Plugin:
     def __init__(self):
@@ -18,13 +19,10 @@ class Plugin:
         system('clear')
         sam_print(sam, 'Going to run an update now.')
         sleep(0.2)
-        system('cd')
-        system('cd Samantha')
+        system('cd ~/')
         system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/Update.sh" > update.sh')
         system('bash update.sh')
-        system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/Restart.sh" > restart.sh')
-        sleep(1)
-        system('clear')
-        sam_print(sam, 'Update done. Going to restart now.')
         sleep(3)
-        system('bash restart.sh')
+        system('clear')
+        sam_print(sam, 'Going to restart system apply all updates.')
+        execv('/usr/bin/env', ('env', 'python', application, 'All done.'))
