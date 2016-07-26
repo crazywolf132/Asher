@@ -20,3 +20,5 @@ class Plugin:
         system('rm -rf push.sh')
         system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/push-all.sh" > push.sh')
         system('bash push.sh')
+        system('clear')
+        sam_print(sam, "Finished sir.")
