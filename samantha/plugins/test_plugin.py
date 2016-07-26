@@ -28,8 +28,7 @@ class Plugin:
             system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/72f29e63108f40f052e95a1f87f7f94efef023a2/Update.sh" > update.sh')
             system('bash update.sh')
             sleep(3)
-            system('clear')
-            sam_print(sam, '\003[1;33mGoing to restart system apply all updates.\033[0m')
+            sam_print(sam, '\003[1;33m' + 'Going to restart system apply all updates.\033[0m')
             execv('/usr/bin/env', ('env', 'python', application, 'All done.'))
         except :
             sam_print(sam, '\003[1;31mPlease connect to the internet to download any updates.\033[0m')
