@@ -1,6 +1,7 @@
 from samantha import Samantha
 from sys import argv
 import random
+system('clear')
 
 messages = ['\033[1;31m',
             '\033[1;32m',
