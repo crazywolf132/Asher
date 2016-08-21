@@ -1,9 +1,9 @@
-# Samantha
-Samantha is an AI. She can talk to you like a normal 
+# Asher
+Asher is an AI. He can talk to you like a normal 
 human, learn from you, and even do tasks for you.
 
 ## Installing.
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/RiskyAINetwork/Ai-Setup/master/Start.sh)"`
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/crazywolf/Ai-Setup/master/Start.sh)"`
 After that... just let it run.
 Q: What about windows?
 A: If you are on windows... well, install linux :)
@@ -14,7 +14,7 @@ Q: Isnt this the same file as the installer?
 A: Well yeah, we are awesome in that way.
 
 ## Usage.
-Samantha can be used for a wide range of usages.
+Asher can be used for a wide range of usages.
 
 ## Modding.
 1: Go to root directory in computer.
@@ -36,6 +36,6 @@ return NOT_COMMAND                  # Anything not listed is not a command. (REQ
 ```
 
 ## Docs.
-DOcs are located at `https://yeahnah.com`
+Docs are located at `https://crazywolf.github.io/Asher`
 
 
