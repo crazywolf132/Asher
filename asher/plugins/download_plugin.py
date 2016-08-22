@@ -22,7 +22,7 @@ class Plugin:
         system('cd Asher')
         system('cd Asher/plugins')
         system('clear')
-        ash_print(sam, '2')
+        ash_print(ash, '2')
         system('clear')
         ash_print(ash, 'Finished.')
         sleep(3)
