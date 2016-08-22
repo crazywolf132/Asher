@@ -16,10 +16,11 @@
 					<h1><a href="index.html">Asher</a> by Crazywolf</h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html" class="button">Home</a></li>
+							<li><a href="/" class="button">Home</a></li>
 							<li><a href="install.html" class="button">Install</a></li>
 							<li><a href="#">Modules</a></li>
-							<li><a href="docs.html" class="button">Docs</a></li>
+							<li><a href="qa.html" class="button">Q&A</a></li>
+							<li><a href="https://github.com/crazywolf132/Asher" class="button">Github</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -30,7 +31,7 @@
 					<p>The AI for the person of tomorrow.</p>
 					<ul class="actions">
 						<li><a href="index.html" class="button special">Home</a></li>
-						<li><a href="docs.html" class="button">Docs</a></li>
+						<li><a href="qa.html" class="button">Q&A</a></li>
 					</ul>
 				</section>
 
@@ -50,79 +51,154 @@
 						<header class="major">
 							<h3>So, you want to learn how to tame the beast?</h3>
 							<br />
+						</header>
 							<div>
-							<h3>Mac & Linux</h3>
+								<h4>Taming this beast is not all as hard as you think.</h4>
+								<br />
+								<h4>How the module system works.</h4>
 								<pre style="text-align: left;">
-1) Turn on the device of which you wish to install Asher.
-2) Make sure it is connected to the internet.
-3) Open terminal.
-4) Run the following command:
-curl -L "https://raw.githubusercontnent.com/crazywolf132/Ai-Setup/master/setup.sh" > start.sh
+The module system is very easy to work with (in our opinion) for new people (people new to code
+and such). The way the system works is by finding every file in a directory and loading it when
+the user says something, by doing this you dont have to use any knollege or try to work out our
+messy code just to add your code.
 								</pre>
-								<h4><b>Some quick information</b></h4>
+								<h4>Starting your first module. Mac and Linux</h4>
 								<pre style="text-align: left;">
-<div style="text-align: center;">
-#################################################################
-## Asher comes with some quite neat features.                  ##
-## There are many sub-commands you can run for certain reasons.##
-#################################################################
-</div>
-
--<b>Run</b>: Will run Asher. <code>bash start.sh run</code><br />
--<b>Install</b>: Will install or re-install Asher. <code>bash start.sh install</code><br />
--<b>Update</b>: Will update Asher. <code>bash start.sh update</code><br />
--<b>Download</b>: Will download <u>ALL</u> plugins avaliable. <code>bash start.sh download</code><br />
--<b>Error</b>: Will fix any errors if you hit one. <code>bash start.sh error</code><u>ONLY USE IF YOU GOT AN ERROR WHEN RUNNING</u><br />
--<b>Status</b>: Will check status of the install, and see if everything is there. <code>bash start.sh status</code><br/>
--<b>Uninstall</b>: Will uninstall Asher and everything to do with him. <code>bash start.sh uninstall</code>
+1) Navigate to your home directory.
+  -Mac: <code>Cmd + Shift + G</code> type in <code>~/</code>
+  -Linux: Open your favorite file browser. Navigate to <code>~/</code>
+2) Enter the <code>Asher</code> directory.
+3) Enter the next <code>asher</code> directory.
+4) Enter the <code>plugins</code> directory.
+5) Create a new file. Name it what you want, but it has to end in <code>_plugin.py</code>
+6) Follow the structure below.
 								</pre>
-								<h4><b>Back to the install.</b></h4>
-								<pre style="text-align: left;">
-5) Seen as we are assuming that this is your first time installing Asher on the system, run: <code>bash start.sh install</code>
-6) Wait for it to finish.
-7) Now, we are assuming it is done. We should probably check that everything is all good with the installtion.
-   Run: <code>bash start.sh status</code>
-   If there are any errors (It will let you know if there is.), run: <code>bash start.sh error</code>
-8) If there are no errors, run: <code>bash start.sh run</code>
-9) All is good. It should run, if it doesnt... well... google. :)
-								</pre>
-							<h3>Windows</h3>
-							<br />
-							<h4>You have found our little secret... we dont have this installation guide yet.
 							</div>
+					</section>
+					<section class="box special">
+						<header class="major">
+							<h3>Layout and Structure of your plugin.</h3>
+							<br />
+							<h4>The header.</h4>
+							<pre style="text-align: left;" class="language-python">
+At the top of every plugin, should be the header. The header should look as follows.
+
+from asher.conversation import Statement
+from time import sleep
+from os import system
+import random
+import re
+from asher.required.required import *
+							</pre>
+							<h4>The core - Basic.</h4>
+							<pre style="text-align: left;">
+The core comprises of a few basics and then all your code.
+Here is an example of our code.
+
+class Plugin:
+    def __init__(self):
+        """
+        Please leave this here or it will cause errors.
+        """
+        self.the_command = ['clear']
+
+    def action(self, command, statement, ash):
+        ash_print(ash, 'Clearing log.')
+        system('clear')
+        ash_print(ash, 'Finished')
+
+############################
+## HOW ALL THIS ^^^ WORKS.##
+############################
+The way it works, is by you give it the command. <code>self.the_command = ['clear']</code>
+Then, you tell it what to do below in the <code>def action(self, command, statement, ash):</code>
+After that, it is up to you.
+If you would like to know of some of the commands you can make it do. Navigate to the next section.
+							</pre>
+							<h4>The core - Advanced.</h4>
+							<pre style="text-align: left;">
+This is the advanced core. You still use the normal header above this.
+This core is for multiple commands. So, if you want all your modules in the one
+file, then you would do it like this.
+
+class Plugin:
+    def __init__(self):
+        """
+        Please leave this here or it will cause errors.
+        """
+
+        self.who = ['who are you', '?']
+        self.help = ['help']
+        self.exit = ['exit please', "quit"]
+
+        self.the_command = self.who + self.help + self.exit
+
+    def action(self, command, statement, ash):
+
+        if command in self.who:
+            ash_print(ash, 'My name is Andrew. I am here to help and serve you.')
+            sleep(1)
+            ash_print(ash, 'Feel free to ask me anything. If i do not know it, I will learn it.')
+        elif command in self.help:
+            ash_print(ash, 'what with?')
+        elif command in self.exit:
+            ash_print(ash, 'Good bye sir.')
+            exit()
+
+############################
+## HOW ALL THIS ^^^ WORKS.##
+############################
+Everything here is pretty standard. The main thing that changes is the grabbing commands.
+To take a command you must do it like: <code>self.something = ['something']</code>
+(replaceing "something" with your code.)
+Also, if you have multiple commands, you have to add them to. <code>self.the_comand = self.something</code>
+the <code>self.something</code> would be what ever you defined above. To add more commands, use a <code>+</code>
+Now, in what the commands actually do.
+If you have more than one, you will have to use if and elif statements.
+it works the same way as before, just you define what the command is first.
+eg.<code> if command in self.something:</code> or <code>elif command in self.something:</code>
+then, anything after that is whatever you want.
+							</pre>
 						</header>
 					</section>
-				</section>
+					<section class="box special">
+						<header class="major">
+							<h3>All the commands you can or have to use.</h3>
+							<br />
+							<pre style="text-align: left;">
+- To make Asher say something: <code>ash_print(ash, 'your message here')</code>
+- To use a terminal command: <code>system('your command here')</code>
+- To make Asher wait: <code>sleep(time here in seconds)</code> eg. <code>sleep(2)   - 2 seconds</code>
+- Make Asher require a word for a command: <code>self.the_command = ['your word']</code>
+- Make Asher require more words for a command: <code>self.the_command = ['word 1', 'word 2', 'word 3']</code>
+...As development goes on, more will be added...
+							</pre>
+						</header>
+					</section>
+					<section class="box special">
+						<header class="major">
+							<h3>Too lazy? Want to use someone elses code?</h3>
+							<br />
+							<h4>Here are some modules made by others.</h4>
+							<!--Use 2 tabs bettween the &lt;Plugin&gt; and the <code>-->
+							<pre style="text-align: left;">
+- Push all code &lt;Plugin&gt;		<code>https://github.com/crazywolf132/Asher-Push-All</code>
+							</pre>
+						</header>
+					</section>
+			</section>
 
 
 			<!-- CTA -->
 				<section id="cta">
-
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-					<form>
-						<div class="row uniform 50%">
-							<div class="8u 12u(mobilep)">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
-							</div>
-							<div class="4u 12u(mobilep)">
-								<input type="submit" value="Sign Up" class="fit" />
-							</div>
-						</div>
-					</form>
-
+					<h2>WARNING</h2>
+					<p>This AI is in its earliest form. Dont expect it to take over the world... just yet.</p>
 				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="https://github.com/crazywolf132/Asher" class="icon fa-github"><span class="label">Github</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; Crazywolf132. All rights reserved.</li>
@@ -137,6 +213,7 @@ curl -L "https://raw.githubusercontnent.com/crazywolf132/Ai-Setup/master/setup.s
 			<script src="assets/js/jquery.scrollgress.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/ace/ace.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
