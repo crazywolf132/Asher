@@ -1,11 +1,11 @@
-from samantha.adapters.output import OutputAdapter
+from asher.adapters.output import OutputAdapter
 import requests
 import json
 
 
 class HipChat(OutputAdapter):
     """
-    An output adapter that allows a samantha instance to send
+    An output adapter that allows a asher instance to send
     responses to a HipChat room.
     """
 

@@ -1,12 +1,12 @@
-from samantha.adapters.input import InputAdapter
-from samantha.conversation import Statement
+from asher.adapters.input import InputAdapter
+from asher.conversation import Statement
 from time import sleep
 import requests
 
 
 class HipChat(InputAdapter):
     """
-    An input adapter that allows a Samantha instance to get
+    An input adapter that allows a Asher instance to get
     input statements from a HipChat room.
     """
 

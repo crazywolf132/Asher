@@ -1,10 +1,10 @@
-from samantha.adapters.output import OutputAdapter
-from samantha.utils.read_input import input_function
+from asher.adapters.output import OutputAdapter
+from asher.utils.read_input import input_function
 
 
 class TerminalAdapter(OutputAdapter):
     """
-    A simple adapter that allows samantha to
+    A simple adapter that allows asher to
     communicate through the terminal.
     """
 

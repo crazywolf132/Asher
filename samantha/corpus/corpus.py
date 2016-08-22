@@ -12,7 +12,7 @@ class Corpus(object):
         Reads a dotted file path and returns the file path.
         """
         parts = dotted_path.split(".")
-        if parts[0] == 'samantha':
+        if parts[0] == 'asher':
             parts.pop(0)
             parts[0] = self.data_directory
 

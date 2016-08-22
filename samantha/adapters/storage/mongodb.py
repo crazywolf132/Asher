@@ -1,11 +1,11 @@
-from samantha.adapters.storage import StorageAdapter
-from samantha.conversation import Statement, Response
+from asher.adapters.storage import StorageAdapter
+from asher.conversation import Statement, Response
 from pymongo import MongoClient
 
 
 class MongoDatabaseAdapter(StorageAdapter):
     """
-    The MongoDatabaseAdapter is an interface that allows samantha
+    The MongoDatabaseAdapter is an interface that allows asher
     to store the conversation as a MongoDB database.
     """
 
@@ -13,7 +13,7 @@ class MongoDatabaseAdapter(StorageAdapter):
         super(MongoDatabaseAdapter, self).__init__(**kwargs)
 
         self.database_name = self.kwargs.get(
-            "database", "samantha-database"
+            "database", "asher-database"
         )
         self.database_uri = self.kwargs.get(
             "database_uri", "mongodb://localhost:27017/"

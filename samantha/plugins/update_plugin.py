@@ -1,10 +1,10 @@
-from samantha.conversation import Statement
+from asher.conversation import Statement
 from time import sleep
 from os import system, execv
 import random
 import os
 import re
-from samantha.required.required import *
+from asher.required.required import *
 
 application = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))+'/application.py'
 

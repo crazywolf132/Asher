@@ -7,25 +7,25 @@ from .utils.queues import ResponseQueue
 from .utils.module_loading import import_module
 
 
-class Samantha(object):
+class Asher(object):
 
     def __init__(self, name, **kwargs):
         kwargs["name"] = name
 
         storage_adapter = kwargs.get("storage_adapter",
-            "samantha.adapters.storage.JsonDatabaseAdapter"
+            "asher.adapters.storage.JsonDatabaseAdapter"
         )
 
         logic_adapters = kwargs.get("logic_adapters", [
-            "samantha.adapters.logic.ClosestMatchAdapter"
+            "asher.adapters.logic.ClosestMatchAdapter"
         ])
 
         input_adapter = kwargs.get("input_adapter",
-            "samantha.adapters.input.VariableInputTypeAdapter"
+            "asher.adapters.input.VariableInputTypeAdapter"
         )
 
         output_adapter = kwargs.get("output_adapter",
-            "samantha.adapters.output.OutputFormatAdapter"
+            "asher.adapters.output.OutputFormatAdapter"
         )
 
         input_output_adapter_pairs = kwargs.get(
@@ -54,7 +54,7 @@ class Samantha(object):
         self.output = OutputAdapterClass(**kwargs)
 
         # Add required system logic adapter
-        self.add_adapter("samantha.adapters.logic.NoKnowledgeAdapter")
+        self.add_adapter("asher.adapters.logic.NoKnowledgeAdapter")
 
         for adapter in logic_adapters:
             self.add_adapter(adapter, **kwargs)
@@ -195,7 +195,7 @@ class Samantha(object):
 
     def set_trainer(self, training_class, **kwargs):
         """
-        Set the module used to train the Samantha.
+        Set the module used to train the Asher.
         """
         self.trainer = training_class(self.storage, **kwargs)
 

@@ -1,10 +1,10 @@
-from samantha.conversation import Statement
+from asher.conversation import Statement
 from time import sleep
 from os import system, execv
 import os
 import random
 import re
-from samantha.required.required import *
+from asher.required.required import *
 
 application = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))+'/application.py'
 
@@ -19,8 +19,8 @@ class Plugin:
         sam_print(sam, 'I see you want to download some new plugins...')
         sam_print(sam, 'Going to download all the plugins that the Developers have made.')
         system('cd')
-        system('cd Samantha')
-        system('cd samantha/plugins')
+        system('cd Asher')
+        system('cd Asher/plugins')
         system('clear')
         sam_print(sam, '2')
         system('clear')

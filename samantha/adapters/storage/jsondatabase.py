@@ -1,11 +1,11 @@
-from samantha.adapters.storage import StorageAdapter
-from samantha.conversation import Statement, Response
+from asher.adapters.storage import StorageAdapter
+from asher.conversation import Statement, Response
 from jsondb import Database
 
 
 class JsonDatabaseAdapter(StorageAdapter):
     """
-    The JsonDatabaseAdapter is an interface that allows samantha
+    The JsonDatabaseAdapter is an interface that allows asher
     to store the conversation as a Json-encoded file.
     """
 

@@ -1,12 +1,12 @@
-from samantha.adapters.storage import StorageAdapter
-from samantha.conversation import Statement, Response
+from asher.adapters.storage import StorageAdapter
+from asher.conversation import Statement, Response
 import random
 import twitter
 
 
 class TwitterAdapter(StorageAdapter):
     """
-    The TwitterAdapter allows samantha to read tweets from twitter.
+    The TwitterAdapter allows asher to read tweets from twitter.
     """
 
     def __init__(self, **kwargs):

@@ -1,5 +1,5 @@
-from samantha.conversation import Statement
-from samantha.corpus import Corpus
+from asher.conversation import Statement
+from asher.corpus import Corpus
 
 
 class Trainer(object):
@@ -36,7 +36,7 @@ class ListTrainer(Trainer):
             self.storage.update(statement)
 
 
-class samanthaCorpusTrainer(Trainer):
+class asherCorpusTrainer(Trainer):
 
     def train(self, *corpora):
         trainer = ListTrainer(self.storage)

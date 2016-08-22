@@ -1,9 +1,9 @@
-from samantha.conversation import Statement
+from asher.conversation import Statement
 from time import sleep
 from os import system
 import random
 import re
-from samantha.required.required import *
+from asher.required.required import *
 
 
 class Plugin:

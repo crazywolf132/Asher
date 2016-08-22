@@ -1,4 +1,4 @@
-from samantha.adapters import Adapter
+from asher.adapters import Adapter
 
 
 class StorageAdapter(Adapter):

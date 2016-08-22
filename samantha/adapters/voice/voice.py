@@ -1,6 +1,6 @@
-from samantha.adapters.input import InputAdapter
-from samantha.adapters.output import OutputAdapter
-from samantha.conversation import Statement
+from asher.adapters.input import InputAdapter
+from asher.adapters.output import OutputAdapter
+from asher.conversation import Statement
 import speech_recognition
 import subprocess
 

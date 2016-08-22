@@ -3,8 +3,8 @@ from .logic_adapter import LogicAdapter
 
 class MultiLogicAdapter(LogicAdapter):
     """
-    MultiLogicAdapter allows samantha to use multiple logic
-    adapters. It has methods that allow samantha to add an
+    MultiLogicAdapter allows asher to use multiple logic
+    adapters. It has methods that allow asher to add an
     adapter, set the context, and process an input statement
     to get a response.
     """

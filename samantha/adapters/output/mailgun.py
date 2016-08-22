@@ -1,4 +1,4 @@
-from samantha.adapters.output import OutputAdapter
+from asher.adapters.output import OutputAdapter
 import requests
 
 

@@ -1,8 +1,8 @@
 from .base_match import BaseMatchAdapter
 
-from samantha.utils.pos_tagger import POSTagger
-from samantha.utils.stop_words import StopWordsManager
-from samantha.utils.word_net import Wordnet
+from asher.utils.pos_tagger import POSTagger
+from asher.utils.stop_words import StopWordsManager
+from asher.utils.word_net import Wordnet
 
 
 class ClosestMeaningAdapter(BaseMatchAdapter):

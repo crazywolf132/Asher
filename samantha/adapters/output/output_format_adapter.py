@@ -1,5 +1,5 @@
-from samantha.adapters.output import OutputAdapter
-from samantha.utils.read_input import input_function
+from asher.adapters.output import OutputAdapter
+from asher.utils.read_input import input_function
 
 
 class OutputFormatAdapter(OutputAdapter):

@@ -1,5 +1,5 @@
-from samantha.adapters.input import InputAdapter
-from samantha.conversation import Statement
+from asher.adapters.input import InputAdapter
+from asher.conversation import Statement
 
 
 class VariableInputTypeAdapter(InputAdapter):

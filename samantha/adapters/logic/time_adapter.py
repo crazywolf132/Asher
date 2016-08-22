@@ -1,5 +1,5 @@
 from .logic_adapter import LogicAdapter
-from samantha.conversation import Statement
+from asher.conversation import Statement
 from textblob.classifiers import NaiveBayesClassifier
 from datetime import datetime
 

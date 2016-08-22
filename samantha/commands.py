@@ -12,7 +12,7 @@ NOT_COMMAND = False
 class Command:
     """
     A simple class to load all the commands that the user
-    can use with Samantha.
+    can use with Asher.
     """
     def process_input(self, statement, sam):
         input_statement = sam.get_last_input_statement()
@@ -58,7 +58,7 @@ class Command:
             sam_print('Going to pause the system to run the update.')
             sam_print('Please hold.')
             system('cd')
-            system('cd Samantha')
+            system('cd Asher')
             system('bash update.sh')
             sam_print('Should be done. Feel free t test out my new knollege base.')
             sleep (0.2)

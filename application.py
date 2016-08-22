@@ -1,4 +1,4 @@
-from samantha import Samantha
+from asher import Asher
 from sys import argv
 import os
 from os import system
@@ -14,13 +14,13 @@ messages = ['\033[1;31m',
 message = random.choice(messages)
 
 # Create a new instance of the AI
-bot = Samantha("No Output",
-        storage_adapter="samantha.adapters.storage.JsonDatabaseAdapter",
+bot = Asher("No Output",
+        storage_adapter="asher.adapters.storage.JsonDatabaseAdapter",
         logic_adapters=[
-            "samantha.adapters.logic.ClosestMatchAdapter"
+            "asher.adapters.logic.ClosestMatchAdapter"
         ],
-        input_adapter="samantha.adapters.input.TerminalAdapter",
-        output_adapter="samantha.adapters.voice.VoiceOutput",
+        input_adapter="asher.adapters.input.TerminalAdapter",
+        output_adapter="asher.adapters.voice.VoiceOutput",
         database="./Ai-DB/database.db"
     )
 

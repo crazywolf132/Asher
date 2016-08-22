@@ -1,5 +1,5 @@
-from samantha.adapters.logic import LogicAdapter
-from samantha.conversation import Statement
+from asher.adapters.logic import LogicAdapter
+from asher.conversation import Statement
 
 
 class NoLogic(LogicAdapter):

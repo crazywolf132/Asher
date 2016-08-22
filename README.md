@@ -1,5 +1,5 @@
 # Asher
-Asher is an AI. He can talk to you like a normal 
+Asher is an AI. He can talk to you like a normal
 human, learn from you, and even do tasks for you.
 
 ## Installing.
@@ -20,14 +20,14 @@ Asher can be used for a wide range of usages.
 1: Go to root directory in computer.
 - MAC: command + shift + G ... type `~/` ... press enter
 - LINUX: Go to file manager. Click `Home`
-2: Enter Samantha Folder...
+2: Enter Asher Folder...
 3: Read docs on what each part does.
 
-## Adding commands that Samantha knows.
+## Adding commands that Asher knows.
 ```python
-if statement == 'clear':            # What samantha needs to hear to proccess the command.
+if statement == 'clear':            # What Asher needs to hear to proccess the command.
     system('clear')                 # Command or other proccess to complete.
-    sam_print("no.")                # What you want Samantha to say when doing the command.
+    sam_print("no.")                # What you want Asher to say when doing the command.
     return IS_COMMAND               # So the system knows that this is a command and not a normal conversation.
 elif statement == 'soemthing':      # Next command incase you have heaps to add.
     #...                            # Command
@@ -37,5 +37,3 @@ return NOT_COMMAND                  # Anything not listed is not a command. (REQ
 
 ## Docs.
 Docs are located at `https://crazywolf.github.io/Asher`
-
-

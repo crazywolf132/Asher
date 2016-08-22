@@ -1,11 +1,11 @@
-from samantha.adapters.input import InputAdapter
-from samantha.conversation import Statement
-from samantha.utils.read_input import input_function
+from asher.adapters.input import InputAdapter
+from asher.conversation import Statement
+from asher.utils.read_input import input_function
 
 
 class TerminalAdapter(InputAdapter):
     """
-    A simple adapter that allows Samantha to
+    A simple adapter that allows Asher to
     communicate through the terminal.
     """
 

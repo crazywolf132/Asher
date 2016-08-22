@@ -1,10 +1,10 @@
-# samantha Treinamento de Língua Corpus
+# asher Treinamento de Língua Corpus
 
-Estes modulos são usados para treinar o samantha, de forma rápida, para responder a várias entradas em diferentes línguas.
-Embora muito do samantha é projetado para ser independente de língua, é sempre util ter estes *sets* de treinamento disponíveis
+Estes modulos são usados para treinar o asher, de forma rápida, para responder a várias entradas em diferentes línguas.
+Embora muito do asher é projetado para ser independente de língua, é sempre util ter estes *sets* de treinamento disponíveis
 para preparar um novo banco de dados e fazer a variedade de respostas que o robô pode ser muito mais diversa.
 
-Para instruções de como usar estes dados, por favor consulte a [documentação do projeto](https://github.com/RiskyAINetwork/samantha/wiki/Training).
+Para instruções de como usar estes dados, por favor consulte a [documentação do projeto](https://github.com/crazywolf132/asher/wiki/Training).
 
 Todos os dados de treinamento contidos neste corpus é contribuição dos usuários.
 

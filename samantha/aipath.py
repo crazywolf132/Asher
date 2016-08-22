@@ -8,7 +8,7 @@ DATA_PATH = os.path.join(APP_PATH, "static")
 LIB_PATH = os.path.join(APP_PATH, "client")
 PLUGIN_PATH = os.path.join(LIB_PATH, "modules")
 
-CONFIG_PATH = os.path.expanduser(os.getenv('Ai_config', '~/.samantha'))
+CONFIG_PATH = os.path.expanduser(os.getenv('Ai_config', '~/.asher'))
 
 
 def config(*fname):
