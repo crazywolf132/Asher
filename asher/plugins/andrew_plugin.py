@@ -19,17 +19,17 @@ class Plugin:
 
         self.the_command = self.who + self.help + self.exit + self.bye
 
-    def action(self, command, statement, sam):
+    def action(self, command, statement, ash):
 
         if command in self.who:
-            sam_print(sam, 'My name is Andrew. I am here to help and serve you.')
+            ash_print(ash, 'My name is Andrew. I am here to help and serve you.')
             sleep(1)
-            sam_print(sam, 'Feel free to ask me anything. If i do not know it, I will learn it.')
+            ash_print(ash, 'Feel free to ask me anything. If i do not know it, I will learn it.')
         elif command in self.help:
-            sam_print(sam, 'what with?')
+            ash_print(ash, 'what with?')
         elif command in self.exit:
-            sam_print(sam, 'Good bye sir.')
+            ash_print(ash, 'Good bye sir.')
             exit()
         elif command in self.bye:
-            sam_print(sam, 'Good bye sir.')
+            ash_print(ash, 'Good bye sir.')
             exit()

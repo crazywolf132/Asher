@@ -15,10 +15,10 @@ class Plugin:
         """
         self.the_command = ['test']
 
-    def action(self, command, statement, sam):
-        sam_print(sam, 'Please dont think that this file is going to work.')
+    def action(self, command, statement, ash):
+        ash_print(ash, 'Please dont think that this file is going to work.')
         system('clear')
-        sam_print(sam, '\003[1;32mGoing to run an update now.\033[0m')
+        ash_print(ash, '\003[1;32mGoing to run an update now.\033[0m')
         sleep(0.2)
         system('cd ~/')
         system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/Update.sh" > update.sh')

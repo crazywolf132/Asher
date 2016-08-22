@@ -15,10 +15,10 @@ class Plugin:
         """
         self.the_command = ['push', 'all']
 
-    def action(self, command, statement, sam):
-        sam_print(sam, "Please wait a moment.")
+    def action(self, command, statement, ash):
+        ash_print(ash, "Please wait a moment.")
         system('rm -rf push.sh')
         system('curl -L "https://raw.githubusercontent.com/crazywolf132/Ai-Setup/master/push-all.sh" > push.sh')
         system('bash push.sh')
         system('clear')
-        sam_print(sam, "Finished sir.")
+        ash_print(ash, "Finished sir.")

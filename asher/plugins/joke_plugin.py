@@ -13,7 +13,7 @@ class Plugin:
         """
         self.the_command = ['joke']
 
-    def action(self, command, statement, sam):
-        sam_print(sam, 'What do you call a blonde who died their hair brown?')
+    def action(self, command, statement, ash):
+        ash_print(ash, 'What do you call a blonde who died their hair brown?')
         sleep(0.3)
-        sam_print(sam, 'Artificial Inteligence!')
+        ash_print(ash, 'Artificial Inteligence!')

@@ -13,6 +13,6 @@ class Plugin:
         """
         self.the_command = ['what is my name', '?']
 
-    def action(self, command, statement, sam):
+    def action(self, command, statement, ash):
         name = 'dick head'
-        sam_print(sam, 'Your name is... ' + name)
+        ash_print(sam, 'Your name is... ' + name)

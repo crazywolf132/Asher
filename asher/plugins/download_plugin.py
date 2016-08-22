@@ -15,16 +15,16 @@ class Plugin:
         """
         self.the_command = ['download']
 
-    def action(self, command, statement, sam):
-        sam_print(sam, 'I see you want to download some new plugins...')
-        sam_print(sam, 'Going to download all the plugins that the Developers have made.')
+    def action(self, command, statement, ash):
+        ash_print(ash, 'I see you want to download some new plugins...')
+        ash_print(ash, 'Going to download all the plugins that the Developers have made.')
         system('cd')
         system('cd Asher')
         system('cd Asher/plugins')
         system('clear')
-        sam_print(sam, '2')
+        ash_print(sam, '2')
         system('clear')
-        sam_print(sam, 'Finished.')
+        ash_print(ash, 'Finished.')
         sleep(3)
-        sam_print(sam, 'Going to restart system apply all updates.')
+        ash_print(ash, 'Going to restart system apply all updates.')
         execv('/usr/bin/env', ('env', 'python', application, 'Welcome back.'))

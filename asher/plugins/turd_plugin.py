@@ -13,5 +13,5 @@ class Plugin:
         """
         self.the_command = ['polish', 'turd']
 
-    def action(self, command, statement, sam):
-        sam_print(sam, 'You can\'t polish a turd, but you can roll it in glitter!')
+    def action(self, command, statement, ash):
+        ash_print(ash, 'You can\'t polish a turd, but you can roll it in glitter!')

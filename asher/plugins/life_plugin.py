@@ -13,9 +13,9 @@ class Plugin:
         """
         self.the_command = ['meaning of life']
 
-    def action(self, command, statement, sam):
+    def action(self, command, statement, ash):
         messages = ["It's 42, you idiot.",
                     "It's 42. How many times do I have to tell you?",
                     "The oposite of death!"]
         message = random.choice(messages)
-        sam_print(sam, message)
+        ash_print(ash, message)

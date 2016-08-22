@@ -13,7 +13,7 @@ class Plugin:
         """
         self.the_command = ['clear']
 
-    def action(self, command, statement, sam):
-        sam_print(sam, 'Clearing log.')
+    def action(self, command, statement, ash):
+        ash_print(ash, 'Clearing log.')
         system('clear')
-        sam_print(sam, 'Finished')
+        ash_print(ash, 'Finished')
