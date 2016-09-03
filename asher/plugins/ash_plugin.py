@@ -20,10 +20,11 @@ class Plugin:
         self.joke = ['joke']
         self.life = ['meaning of life']
         self.push = ['push', 'all']
-        self.turf = ['polish', 'turd']
+        self.turd = ['polish', 'turd']
         self.update = ['update']
+        self.name = ['my name']
 
-        self.the_command = self.who + self.help + self.exit + self.clear + self.download + self.joke + self.life + self.push + self.turd + self.update
+        self.the_command = self.who + self.help + self.exit + self.clear + self.download + self.joke + self.life + self.push + self.turd + self.update + self.name
 
     def action(self, command, statement, ash):
 
@@ -71,3 +72,5 @@ class Plugin:
             system('cd ~/')
             ash_print(ash, 'When I am done updating, I will restart.')
             system('bash start.sh update')
+        elif command in self.name:
+            ash_print(ash, name)
