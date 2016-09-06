@@ -73,4 +73,4 @@ class Plugin:
             ash_print(ash, 'When I am done updating, I will restart.')
             system('bash start.sh update')
         elif command in self.name:
-            ash_print(ash, name)
+            ash_print(ash, "wanker")
