@@ -37,9 +37,6 @@ class Plugin:
         elif command in self.exit:
             ash_print(ash, 'Good bye.')
             exit()
-        elif command in self.bye:
-            ash_print(ash, 'Good bye.')
-            exit()
         elif command in self.clear:
             ash_print(ash, 'Terminal is cleared.')
             system('clear')
