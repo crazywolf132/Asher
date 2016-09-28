@@ -7,8 +7,9 @@ import re
 IS_COMMAND = True
 NOT_COMMAND = False
 
-
-
+################################################################################
+## This file is obsolete. Please leave alone, it is only for Dev team use.
+################################################################################
 class Command:
     """
     A simple class to load all the commands that the user
