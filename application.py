@@ -20,7 +20,7 @@ bot = Asher("No Output",
             "asher.adapters.logic.ClosestMatchAdapter"
         ],
         input_adapter="asher.adapters.input.TerminalAdapter",
-        output_adapter="asher.adapters.output.TerminalAdapter",
+        output_adapter="asher.adapters.voice.VoiceOutput",
         database="./Ai-DB/database.db"
     )
 
