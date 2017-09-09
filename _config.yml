@@ -1,0 +1,8 @@
+title: Samantha
+description: The girl that runs life as we know it.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-merlot
+
+gems:
+  - jekyll-mentions
